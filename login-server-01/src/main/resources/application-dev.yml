@@ -1,0 +1,18 @@
+server:
+  port: 28081
+spring:
+  application:
+    name: login-server-01
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:28080/eureka/ #eureka注册地址
+
+
+
+
+
