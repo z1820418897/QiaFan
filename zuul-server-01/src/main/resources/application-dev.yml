@@ -22,3 +22,18 @@ zuul:
 #    github:
 #      path: /github/**
 #      url: https://github.com/
+
+
+#service 的名称
+ServiceId: zuul-server
+
+info:
+  app:
+    name: ${ServiceId}
+    ip: 
+    port: ${server.port}
+    active: Development
+  company.name: www.QiaFan.com
+  build.artifactId:
+  build.version:
+
