@@ -19,7 +19,7 @@
       <module name="consumer-server-01" target="1.5" />
       <module name="consumerserver" target="1.8" />
       <module name="databaseserver01" target="1.8" />
-      <module name="eureka-server-01" target="1.5" />
+      <module name="eureka-server-01" target="1.8" />
       <module name="eurekaserver01" target="1.8" />
       <module name="filebase-server-01" target="1.8" />
       <module name="filebaseserver01" target="1.8" />

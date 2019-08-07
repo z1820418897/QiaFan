@@ -4,7 +4,6 @@ spring:
   application:
     name: login-server-01
 
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -12,13 +11,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:28080/eureka/ #eureka注册地址
 
-#service 的名称
-ServiceId: login-server
 
 info:
   app:
-    name: ${ServiceId}
-    ip: 
+    name: ${spring.application.name}
+    ip:
     port: ${server.port}
     active: Development
   company.name: www.QiaFan.com

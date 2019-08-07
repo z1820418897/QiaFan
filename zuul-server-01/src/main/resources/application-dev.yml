@@ -13,7 +13,6 @@ eureka:
 
 zuul:
   routes:
-
     login:
       path: /login/**
       serviceId: login-server-01
@@ -24,13 +23,10 @@ zuul:
 #      url: https://github.com/
 
 
-#service 的名称
-ServiceId: zuul-server
-
 info:
   app:
-    name: ${ServiceId}
-    ip: 
+    name: ${spring.application.name}
+    ip:
     port: ${server.port}
     active: Development
   company.name: www.QiaFan.com
