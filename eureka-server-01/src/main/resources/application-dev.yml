@@ -4,11 +4,12 @@ server:
 eureka:
   instance:
     hostname: eureka-server-01 #eureka服务实例
+    prefer-ip-address: true #注册自己的ip
   client:
     register-with-eureka: false #不拔自己注册在服务上
     fetch-registry: false #不从eureka来获取服务的注册信息
     service-url:
-        defaultZone: http://localhost:28080/eureka/ #eureka注册地址
+        defaultZone: http://localhost:${server.port}/eureka/ #eureka注册地址
 
 
 
