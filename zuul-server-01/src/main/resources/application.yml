@@ -1,3 +1,25 @@
+
+
+
+###参数###
+#service 的名称
+ServiceId: API-gateway
+#eureka的地址
+EurekaIpAddr: root:root@localhost:28080
+#登陆服务名称
+LoginName: LOGIN-SERVER
+
+
+###环境配置###
 spring:
   profiles:
     active: dev
+  application:
+    name: ${ServiceId}
+
+###路由设置###
+zuul:
+  routes:
+    login:
+      path: /login/**
+      serviceId: ${LoginName}

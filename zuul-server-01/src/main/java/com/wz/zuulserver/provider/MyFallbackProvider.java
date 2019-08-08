@@ -1,6 +1,7 @@
 package com.wz.zuulserver.provider;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -16,9 +17,14 @@ import java.util.Map;
 
 @Component
 public class MyFallbackProvider implements FallbackProvider {
+
+    @Value("${LoginName}")
+    private String loginName;
+
+
     @Override
     public String getRoute() {
-        return "login-server-01";
+        return loginName;
     }
 
     @Override
@@ -47,10 +53,10 @@ public class MyFallbackProvider implements FallbackProvider {
             @Override
             public InputStream getBody() throws IOException {
                 ObjectMapper objectMapper = new ObjectMapper();
-                Map<String, Object> map = new HashMap<>();
+             /*   Map<String, Object> map = new HashMap<>();
                 map.put("status", 200);
-                map.put("message", "无法连接，请检查您的网络");
-                return new ByteArrayInputStream(objectMapper.writeValueAsString(map).getBytes("UTF-8"));
+                map.put("message", "无法连接，请检查您的网络");*/
+                return new ByteArrayInputStream(objectMapper.writeValueAsString("服务正忙..请稍后访问").getBytes("UTF-8"));
             }
 
             @Override
