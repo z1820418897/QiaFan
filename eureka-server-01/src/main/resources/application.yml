@@ -1,3 +1,9 @@
 spring:
   profiles:
     active: dev
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
