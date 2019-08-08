@@ -1,3 +1,12 @@
+
+###参数###
+#service 的名称
+ServiceId: login-server
+#eureka的地址
+EurekaIpAddr: root:root@localhost:28080
+
+
+###环境配置###
 spring:
   profiles:
     active: dev
