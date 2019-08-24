@@ -4,6 +4,14 @@ spring:
   application:
     name: ${ServiceId}
 
+  #视图解析器
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+    static-path-pattern: /static/**
+
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -21,5 +29,6 @@ info:
   company.name: www.QiaFan.com
   build.artifactId:
   build.version:
+
 
 
